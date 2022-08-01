@@ -1,0 +1,23 @@
+//  Write a program in C to find the Hailstone Sequence of a given number upto 1. 
+
+#include<iostream>
+using namespace std;
+void hailstone_seq(int n )
+{
+    if(n==1)
+    {
+        cout<<"1";
+        return;
+    }
+    cout<<n<<" ";
+    if((n & 1)==0)
+    hailstone_seq(n/2);
+    else
+    hailstone_seq(3*n+1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    hailstone_seq(n);
+}
