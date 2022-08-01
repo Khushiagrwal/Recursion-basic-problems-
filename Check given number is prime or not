@@ -1,0 +1,23 @@
+//  Write a program in C to check a number is a prime number or not using recursion. 
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n,int i)
+{
+    if((n & 1)==0) 
+        return true;
+    if(i==n || n%i==0)
+        return true;
+    else
+        prime(n,i+1);
+    return false;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    if(prime(n,2))
+        cout<<"False";
+    else
+        cout<<"True";
+}
