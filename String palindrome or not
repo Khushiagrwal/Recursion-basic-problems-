@@ -1,0 +1,19 @@
+// Write a program in C to Check whether a given String is Palindrome or not
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+string  palindrome(string s)
+{
+    reverse(s.begin(),s.end());
+    return s;
+}
+int main()
+{
+    string s;
+    cin>>s;
+    if(s==palindrome(s))
+    cout<<"YES";
+    else
+    cout<<"NO";  
+}
