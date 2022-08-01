@@ -1,0 +1,18 @@
+// Write a program in C to print first n natural numbers using recursion.
+
+#include<iostream>
+using namespace std;
+void natural_no(int n,int i)
+{
+    if(i==n+1)
+    return;
+    else
+    cout<<i<<" ";
+    natural_no(n,i+1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    natural_no(n,1);
+}
