@@ -1,0 +1,18 @@
+// Write a program in C to print the array elements using recursion.
+
+#include<iostream>
+using namespace std;
+void print_array(int *f,int no)
+{
+    for(int i=0;i<no;i++)
+    cout<<f[i]<<" ";
+}
+int main()
+{
+    int no;
+    cin>>no;
+    int *n= new int[no];
+    for(int i=0;i<no;i++)
+    cin>>n[i];
+    print_array(n,no);
+}
