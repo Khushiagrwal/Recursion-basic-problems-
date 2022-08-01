@@ -1,0 +1,22 @@
+// Write a program in C to find the first capital letter in a string using recursion. 
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+char  capital(string s,int i)
+{
+    if(s[i]>='A' && s[i]<='Z')
+    {
+        cout<<s[i];
+        return s[i];
+    }
+    capital(s,i+1);
+}
+int main()
+{
+    string s;
+    cin>>s;
+    cout<<"First capital character is in given string is ";
+    capital(s,0);
+}
+
