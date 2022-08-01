@@ -1,0 +1,16 @@
+// Write a program in C to find the sum of digits of a number using recursion. 
+
+#include<iostream>
+using namespace std;
+int count(int n,int sum)
+{
+    if(n==0)
+        return sum;
+    count(n/10,sum+(n%10));   
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<"No of digits in given number is "<<count(n,0);
+}
