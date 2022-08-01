@@ -1,0 +1,22 @@
+// Write a program in C++ to print even or odd numbers in given range using recursion.
+
+#include<iostream>
+#include<string>
+using namespace std;
+void even_odd(int n1,int n2,string even ,string odd)
+{
+    for(int i=n1;i<=n2;i++)
+    {
+        if(i & 1)
+        odd+=to_string(i)+" ";
+        else
+        even+=to_string(i)+" ";
+    }
+    cout<<even<<endl<<odd;
+}
+int main()
+{
+    int n1,n2;
+    cin>>n1>>n2;
+    even_odd(n1,n2,"","");
+}
