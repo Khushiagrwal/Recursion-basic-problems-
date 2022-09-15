@@ -1,0 +1,50 @@
+# include<iostream>
+#include<climits>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int n; cin>>n;
+    int *arr =new int[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    int mid=n/2;
+    int *arr1=new int[mid];
+    for(int i=0;i<mid;i++)
+        arr1[i]=arr[i];
+    int p=n-mid;
+    int *arr2=new int[p];
+    for(int i=0;i<p;i++)
+        arr2[i]=arr[mid+i];
+    int i=0,j=0,k=0;
+    while(i<mid && j<p)
+    {
+        if(arr2[j]<arr1[i])
+        {
+            arr[k]=arr2[j];
+            j++;
+            k++;
+        }
+        else 
+        {
+            arr[k]=arr1[i];
+            i++;
+            k++;
+        }
+    }
+    while(i<mid)
+    {
+        arr[k]=arr1[i];
+        i++;
+    }
+    while(j<p)
+    {
+        arr[k]=arr2[j];
+        j++;
+    }
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+
+}
